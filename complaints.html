@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Complaints</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🏠 Hostel Complaint Portal</div>
+
+        <nav>
+            <a href="index.html">Register Complaint</a>
+            <a href="complaints.html" class="active">View Complaints</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Hostel Complaints</h1>
+            <p>View and manage complaints registered by hostel students.</p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Complaints</h3>
+                <p id="totalCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="resolvedCount">0</p>
+            </div>
+
+        </section>
+
+        <!-- Complaint List -->
+        <section class="complaints-card">
+
+            <div class="table-header">
+                <h2>Complaint List</h2>
+
+                <button type="button" class="refresh-btn">
+                    🔄 Refresh
+                </button>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search by student, room or complaint..."
+                >
+
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Wi-Fi">Wi-Fi</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="">All Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+
+            </div>
+
+            <!-- Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Room</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="complaintsBody">
+                        <!-- Complaints will be loaded here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Hostel Complaint Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

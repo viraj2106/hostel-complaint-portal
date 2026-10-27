@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hostel Complaint Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            🏠 Hostel Complaint Portal
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="active">
+                Register Complaint
+            </a>
+
+            <a href="complaints.html">
+                View Complaints
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+
+    <main class="container">
+
+        <!-- Introduction -->
+
+        <section class="hero">
+
+            <h1>
+                Hostel Complaint Portal
+            </h1>
+
+            <p>
+                Register your hostel complaints quickly and easily.
+            </p>
+
+        </section>
+
+
+        <!-- Complaint Form -->
+
+        <section class="form-card">
+
+            <h2>
+                📝 Register a Complaint
+            </h2>
+
+            <p class="subtitle">
+                Please provide accurate details so that the hostel
+                administration can resolve your issue.
+            </p>
+
+
+            <form id="complaintForm">
+
+                <!-- Student Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Room + Category -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="room">
+                            Room Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="room"
+                            name="room"
+                            placeholder="e.g. 204"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Complaint Category
+                        </label>
+
+                        <select
+                            id="category"
+                            name="category"
+                            required
+                        >
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="Electrical">
+                                Electrical
+                            </option>
+
+                            <option value="Plumbing">
+                                Plumbing
+                            </option>
+
+                            <option value="Cleaning">
+                                Cleaning
+                            </option>
+
+                            <option value="Wi-Fi">
+                                Wi-Fi
+                            </option>
+
+                            <option value="Furniture">
+                                Furniture
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Complaint Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="5"
+                        placeholder="Describe your complaint clearly..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Date -->
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Complaint Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Complaint
+                </button>
+
+
+                <!-- Success / Error Message -->
+
+                <p
+                    id="successMessage"
+                    class="success-message"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p> 
+            © 2026 Hostel Complaint Portal
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
